@@ -63,6 +63,10 @@
     "typescript-eslint": "^8.20.0"
   },
   "jest": {
+    "moduleNameMapper": {
+      "^@/(.*)$": "<rootDir>/$1",
+      "^src/(.*)$": "<rootDir>/$1"
+    },
     "moduleFileExtensions": [
       "js",
       "json",

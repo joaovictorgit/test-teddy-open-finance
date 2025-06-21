@@ -2,7 +2,7 @@ import { Inject, Injectable } from '@nestjs/common';
 import { IsNull, Repository } from 'typeorm';
 import { Url } from './url.entity';
 import { User } from 'src/user/user.entity';
-import { Result } from 'src/common/result';
+import { Result } from '@/common/result';
 import { randomBytes } from 'crypto';
 
 @Injectable()

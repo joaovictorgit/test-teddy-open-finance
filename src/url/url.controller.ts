@@ -2,10 +2,10 @@ import { Body, Controller, Delete, Get, HttpStatus, Logger, Param, Post, Put, Re
 import { ApiTags } from '@nestjs/swagger';
 import { UrlService } from './url.service';
 import { Response } from 'express';
-import { AuthGuard } from 'src/auth/auth.guard';
-import { OptionalAuthGuard } from 'src/auth/authOptional.guard';
-import { UserService } from 'src/user/user.service';
-import { User } from 'src/user/user.entity';
+import { AuthGuard } from '@/auth/auth.guard';
+import { OptionalAuthGuard } from '@/auth/authOptional.guard';
+import { UserService } from '@/user/user.service';
+import { User } from '@/user/user.entity';
 import { ShortCodeResource, UrlResource } from './url.resource';
 
 @Controller('url')
