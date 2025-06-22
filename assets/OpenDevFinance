@@ -1,0 +1,250 @@
+type: collection.insomnia.rest/5.0
+name: Short URL
+meta:
+  id: wrk_20d40c2147a2487ab414f2c7862ace05
+  created: 1750291403007
+  modified: 1750291403007
+  description: ""
+collection:
+  - name: User
+    meta:
+      id: fld_2261ebdac3bb489aa212ef9de11f9121
+      created: 1750291411798
+      modified: 1750291411798
+      sortKey: -1750291411798
+      description: ""
+    children:
+      - url: http://localhost:3000/api/user
+        name: Create User
+        meta:
+          id: req_a03b0ef6a2934abd827457b1be7efb71
+          created: 1750291414602
+          modified: 1750353059540
+          isPrivate: false
+          description: ""
+          sortKey: -1750291414602
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"email": "joaovictor@gmail.com",
+            	"password": "123"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.2.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: URL
+    meta:
+      id: fld_ae4bcac78971400eb891ddefbda829bd
+      created: 1750355713199
+      modified: 1750355713199
+      sortKey: -1750355713199
+      description: ""
+    children:
+      - url: http://localhost:3000/api/url
+        name: Short Url
+        meta:
+          id: req_b5e79abe15514ba6a820b430c5624a22
+          created: 1750355716176
+          modified: 1750506463859
+          isPrivate: false
+          description: ""
+          sortKey: -1750355716176
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"originalUrl": "https://www.youtube.com/"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.2.0
+        authentication:
+          type: bearer
+          token: "{{ _['{}'].token }}"
+          disabled: false
+          prefix: ""
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/api/url/v-mRkI
+        name: Get Url
+        meta:
+          id: req_6465cfb2c4ca4a66873503a3ac2ade40
+          created: 1750464489749
+          modified: 1750513526937
+          isPrivate: false
+          description: ""
+          sortKey: -1750464489749
+        method: GET
+        parameters:
+          - id: pair_c9355972854240518a567dc39882e4a9
+            name: shortCode
+            value: 1lc5Qh
+            description: ""
+            disabled: true
+        headers:
+          - name: User-Agent
+            value: insomnia/11.2.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/api/url/list
+        name: List
+        meta:
+          id: req_c673dc3cb43b4866b125853549be228f
+          created: 1750465461339
+          modified: 1750465492815
+          isPrivate: false
+          description: ""
+          sortKey: -1750465461339
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.2.0
+        authentication:
+          type: bearer
+          token: "{{ _['{}'].token }}"
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/api/url/_4F4U8
+        name: Delete Url
+        meta:
+          id: req_4a3b42e0ae884eb7900fa5acfe856144
+          created: 1750505450493
+          modified: 1750505565106
+          isPrivate: false
+          description: ""
+          sortKey: -1750464975544
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/11.2.0
+        authentication:
+          type: bearer
+          token: "{{ _['{}'].token }}"
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/api/url/1lc5Qh
+        name: Update Original Url
+        meta:
+          id: req_009b7284e12d4607839f4c8a3bca47f2
+          created: 1750506345756
+          modified: 1750507161757
+          isPrivate: false
+          description: ""
+          sortKey: -1750464732646.5
+        method: PUT
+        body:
+          mimeType: application/json
+          text: >-
+            {
+            	"originalUrl": "https://www.youtube.com/watch?v=MeX0yHMs9Nk&list=RDMeX0yHMs9Nk&start_radio=1"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.2.0
+        authentication:
+          type: bearer
+          token: "{{ _['{}'].token }}"
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Auth
+    meta:
+      id: fld_73a53f42ce1f4023bc1afff800d3d6f4
+      created: 1750374639618
+      modified: 1750374639618
+      sortKey: -1750374639618
+      description: ""
+    children:
+      - url: http://localhost:3000/api/auth/login
+        name: Login
+        meta:
+          id: req_5360ae8b68c543e4afcc6b830a24b1b2
+          created: 1750352849950
+          modified: 1750374646644
+          isPrivate: false
+          description: ""
+          sortKey: -1750374646616
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"email": "joaovictor@gmail.com",
+            	"password": "123"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.2.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_cfc239e9962b55bc7cb6f2abbc18b4857ba13cdc
+    created: 1750291403044
+    modified: 1750291403044
+environments:
+  name: Base Environment
+  meta:
+    id: env_cfc239e9962b55bc7cb6f2abbc18b4857ba13cdc
+    created: 1750291403036
+    modified: 1750356553901
+    isPrivate: false
+  data:
+    "{}":
+      token: "{% response 'body', 'req_5360ae8b68c543e4afcc6b830a24b1b2',
+        'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'always', 60 %}"
