@@ -65,6 +65,7 @@ docker-compose up --build
 [Download da coleção](./assets/OpenDevFinance)
 
 - **Importe a coleção no Insomnia para realizar as requisições.**
+- **Link da documentação do Swagger: http://localhost:3000/api/docs**
 
 ## Rodar os testes
 
